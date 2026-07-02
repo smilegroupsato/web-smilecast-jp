@@ -1,0 +1,39 @@
+name: Deploy SMC site
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'site/**'
+      - '.github/workflows/deploy.yml'
+  workflow_dispatch:
+
+concurrency:
+  group: deploy-production
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    name: Deploy to Value Domain server
+    runs-on: ubuntu-latest
+    if: ${{ vars.DEPLOY_ENABLED == 'true' }}
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Deploy via FTP/FTPS
+        uses: SamKirkland/FTP-Deploy-Action@v4.4.0
+        with:
+          server: ${{ secrets.VALUE_SERVER_FTP_HOST }}
+          username: ${{ secrets.VALUE_SERVER_FTP_USER }}
+          password: ${{ secrets.VALUE_SERVER_FTP_PASSWORD }}
+          port: ${{ vars.VALUE_SERVER_FTP_PORT || '21' }}
+          protocol: ${{ vars.VALUE_SERVER_FTP_PROTOCOL || 'ftps' }}
+          local-dir: ${{ vars.LOCAL_DIR || './site/' }}
+          server-dir: ${{ vars.REMOTE_DIR || './' }}
+          exclude: |
+            **/.git*
+            **/.git*/**
+            **/node_modules/**
