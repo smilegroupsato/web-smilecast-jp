@@ -1,4 +1,9 @@
 (() => {
+  const mobileStylesheet = document.createElement('link');
+  mobileStylesheet.rel = 'stylesheet';
+  mobileStylesheet.href = './mobile-fix.css';
+  document.head.appendChild(mobileStylesheet);
+
   const button = document.querySelector('.menu-button');
   const nav = document.querySelector('.global-nav');
   const year = document.querySelector('#year');
