@@ -11,6 +11,7 @@
   <style>
     .brand { gap: 0; }
     .brand-text strong { letter-spacing: 0.04em; }
+    .global-nav { font-size: 14px; }
     .service-card h3 { word-break: keep-all; }
     .bpo-note {
       margin: 0 0 28px;
@@ -28,6 +29,17 @@
       color: #082a57;
       font-size: 20px;
       line-height: 1.5;
+    }
+    .service-review-note {
+      margin: 28px 0 0;
+      padding: 16px 18px;
+      color: #7a5b10;
+      background: #fff5d8;
+      border: 1px solid #ecd891;
+      border-radius: 14px;
+      font-size: 12px;
+      font-weight: 700;
+      line-height: 1.8;
     }
     .employment-support {
       margin: 30px 0 26px;
@@ -56,6 +68,67 @@
       color: #3e5570;
       font-size: 14px;
       line-height: 1.9;
+    }
+    .people-list strong,
+    .people-list small {
+      font-size: 14px;
+      line-height: 1.65;
+    }
+    .people-list small {
+      margin-top: 2px;
+    }
+    .company-table > div:first-child dd {
+      color: #082a57;
+      font-size: 17px;
+      font-weight: 800;
+    }
+    .review-box {
+      background: linear-gradient(135deg, #fff8df, #fffdf4);
+      border-color: #eadba8;
+    }
+    .review-box .section-label {
+      color: #b47700;
+    }
+    .contact-routes {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin: 26px 0 18px;
+    }
+    .contact-route {
+      padding: 18px;
+      background: #f7fbff;
+      border: 1px solid #dce5ef;
+      border-radius: 16px;
+    }
+    .contact-route span {
+      display: block;
+      margin-bottom: 8px;
+      color: #0f6fd6;
+      font-size: 10px;
+      font-weight: 900;
+      letter-spacing: 0.12em;
+    }
+    .contact-route h3 {
+      margin: 0 0 8px;
+      color: #082a57;
+      font-size: 16px;
+    }
+    .contact-route p {
+      margin: 0 !important;
+      font-size: 12px;
+      line-height: 1.8;
+    }
+    .contact-note {
+      margin-top: 18px !important;
+      font-size: 12px;
+    }
+    @media (max-width: 980px) {
+      .global-nav a { font-size: 12px; }
+    }
+    @media (max-width: 760px) {
+      .global-nav a { font-size: 18px; }
+      .contact-routes { grid-template-columns: 1fr; }
     }
   </style>
   <script src="./script.js" defer></script>
