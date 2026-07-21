@@ -1,0 +1,96 @@
+/* Smartphone-only refinement for the hero business map. */
+@media (max-width: 760px) {
+  .hero-visual {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+    width: 100%;
+    min-height: 0;
+    margin-top: 12px;
+    padding: 18px 0 4px;
+    transform: none;
+  }
+
+  .hero-visual .orbit {
+    display: none;
+  }
+
+  .visual-core {
+    position: relative;
+    top: auto;
+    left: auto;
+    grid-column: 1 / -1;
+    width: 128px;
+    height: 128px;
+    margin: 0 auto 8px;
+    border-width: 7px;
+    transform: none;
+  }
+
+  .visual-core strong {
+    font-size: 31px;
+  }
+
+  .visual-core span {
+    margin-top: 6px;
+    font-size: 9px;
+  }
+
+  .visual-card,
+  .card-telecom,
+  .card-sales,
+  .card-event {
+    position: relative;
+    inset: auto;
+    width: auto;
+    min-width: 0;
+    min-height: 116px;
+    padding: 15px 14px;
+    border: 1px solid rgba(8, 42, 87, 0.08);
+    border-radius: 16px;
+    box-shadow: 0 12px 30px rgba(8, 42, 87, 0.1);
+  }
+
+  .visual-card::after {
+    display: none;
+  }
+
+  .visual-card strong {
+    font-size: 15px;
+    line-height: 1.45;
+  }
+
+  .visual-card small {
+    font-size: 10px;
+    line-height: 1.55;
+  }
+
+  .card-number {
+    margin-bottom: 7px;
+  }
+
+  .card-event {
+    grid-column: 1 / -1;
+    min-height: 0;
+  }
+
+  .hero-tags {
+    gap: 8px;
+    margin-top: 28px;
+  }
+
+  .hero-tags span {
+    padding: 7px 12px;
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 380px) {
+  .hero-visual {
+    grid-template-columns: 1fr;
+  }
+
+  .card-event {
+    grid-column: auto;
+  }
+}
