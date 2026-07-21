@@ -149,3 +149,45 @@ html body .contact-route p {
   font-size: 14px !important;
   line-height: 1.9 !important;
 }
+
+/* Layout fixes after mobile preview review. */
+html body .company-lead,
+html body .people-copy > p:not(.section-label),
+html body .contact-box > div:last-child > p,
+html body .intro-copy > p:not(.review-note) {
+  max-width: none !important;
+}
+
+@media (max-width: 760px) {
+  html body .service-card h3 {
+    word-break: normal !important;
+    overflow-wrap: anywhere !important;
+    font-size: 24px !important;
+    line-height: 1.45 !important;
+  }
+
+  html body .service-card > p:not(.service-index, .review-note) {
+    min-height: auto !important;
+    font-size: 15px !important;
+    line-height: 1.9 !important;
+  }
+
+  html body .section h2,
+  html body .intro h2,
+  html body .people-copy h2 {
+    word-break: normal !important;
+    overflow-wrap: anywhere !important;
+  }
+
+  html body .company-lead,
+  html body .people-copy > p:not(.section-label),
+  html body .contact-box > div:last-child > p,
+  html body .intro-copy > p:not(.review-note) {
+    width: 100% !important;
+    max-width: none !important;
+  }
+
+  html body .company-table > div {
+    grid-template-columns: 1fr !important;
+  }
+}
