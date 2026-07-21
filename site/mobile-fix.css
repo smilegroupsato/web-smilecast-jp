@@ -94,3 +94,58 @@
     grid-column: auto;
   }
 }
+
+/* Detailed typography refinements requested during review. */
+html body .hero-visual .card-number {
+  font-size: 13px !important;
+  line-height: 1.4 !important;
+  letter-spacing: 0.16em !important;
+}
+
+html body .hero-visual .visual-card strong {
+  font-size: 18px !important;
+  line-height: 1.45 !important;
+}
+
+html body .hero-visual .visual-card small {
+  font-size: 13px !important;
+  line-height: 1.65 !important;
+}
+
+html body .hero-tags span {
+  padding: 10px 18px !important;
+  font-size: 14px !important;
+  line-height: 1.45 !important;
+}
+
+html body .service-card li {
+  font-size: 14px !important;
+  line-height: 1.85 !important;
+}
+
+html body .strength-grid span {
+  font-size: 16px !important;
+  line-height: 1.4 !important;
+}
+
+html body .strength-grid p {
+  font-size: 15px !important;
+  line-height: 1.9 !important;
+}
+
+html body .company-table dt {
+  font-size: 14px !important;
+  line-height: 1.7 !important;
+}
+
+html body .company-table > div:first-child dd {
+  color: #445972 !important;
+  font-size: 13px !important;
+  font-weight: 400 !important;
+  line-height: 1.8 !important;
+}
+
+html body .contact-route p {
+  font-size: 14px !important;
+  line-height: 1.9 !important;
+}
