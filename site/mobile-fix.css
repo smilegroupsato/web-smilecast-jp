@@ -191,3 +191,69 @@ html body .intro-copy > p:not(.review-note) {
     grid-template-columns: 1fr !important;
   }
 }
+
+/* Mobile menu overlay fix. */
+@media (max-width: 760px) {
+  html body.menu-open {
+    overflow: hidden !important;
+  }
+
+  html body.menu-open .draft-bar {
+    display: none !important;
+  }
+
+  html body.menu-open .site-header {
+    position: fixed !important;
+    top: 0 !important;
+    right: 0 !important;
+    left: 0 !important;
+    z-index: 1003 !important;
+    background: #ffffff !important;
+    border-bottom: 1px solid rgba(220, 229, 239, 0.95) !important;
+  }
+
+  html body.menu-open .header-inner {
+    position: relative !important;
+    z-index: 1004 !important;
+    min-height: 76px !important;
+  }
+
+  html body .global-nav {
+    top: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    left: 0 !important;
+    z-index: 1001 !important;
+    min-height: 100dvh !important;
+    padding: 112px 28px 48px !important;
+    background: #ffffff !important;
+  }
+
+  html body .global-nav.open {
+    opacity: 1 !important;
+    pointer-events: auto !important;
+    transform: none !important;
+  }
+
+  html body .global-nav a {
+    width: min(100%, 280px) !important;
+    padding: 8px 0 !important;
+    color: #082a57 !important;
+    font-size: 22px !important;
+    line-height: 1.35 !important;
+    text-align: center !important;
+  }
+
+  html body .global-nav .nav-cta {
+    margin-top: 6px !important;
+    padding: 16px 28px !important;
+    color: #ffffff !important;
+    font-size: 18px !important;
+  }
+
+  html body.menu-open .brand,
+  html body.menu-open .menu-button {
+    position: relative !important;
+    z-index: 1005 !important;
+  }
+}
