@@ -110,13 +110,33 @@
       margin: 0 0 8px;
       color: #082a57;
       font-size: 16px;
+      white-space: nowrap;
     }
     .contact-route p {
       margin: 0 !important;
       font-size: 12px;
       line-height: 1.8;
     }
+    .form-button { gap: 0.25em !important; }
     .form-button .button-line { display: inline; }
+
+    .hero-lead,
+    .intro-copy > p,
+    .people-copy > p:not(.section-label),
+    .contact-box > div:last-child > p,
+    .company-lead {
+      word-break: normal !important;
+      overflow-wrap: normal !important;
+      text-wrap: pretty;
+    }
+
+    .strength-grid span {
+      display: block !important;
+      font-size: 22px !important;
+      line-height: 1.1 !important;
+      margin-bottom: 8px !important;
+    }
+    .strength-grid h3 { margin-top: 18px !important; }
 
     @media (max-width: 980px) {
       .global-nav a { font-size: 15px !important; }
@@ -124,6 +144,27 @@
     @media (max-width: 760px) {
       .global-nav a { font-size: 19px !important; }
       .contact-routes { grid-template-columns: 1fr; }
+      .hero { padding-top: 54px !important; }
+      .hero-lead { font-size: 14px !important; line-height: 1.95 !important; }
+      .visual-core { width: 150px !important; height: 150px !important; margin-bottom: 4px !important; border-width: 8px !important; }
+      .visual-core strong { font-size: 36px !important; }
+      .visual-core span { font-size: 10px !important; line-height: 1.45 !important; }
+      .visual-card,
+      .card-telecom,
+      .card-sales,
+      .card-event { min-height: 122px !important; padding: 18px 16px !important; }
+      .card-telecom { grid-column: 1 / -1 !important; width: min(100%, 280px) !important; justify-self: center !important; }
+      .card-event { grid-column: auto !important; }
+      .hero-visual .card-number { font-size: 16px !important; margin-bottom: 5px !important; }
+      .hero-visual .visual-card strong { font-size: 21px !important; line-height: 1.35 !important; }
+      .hero-visual .visual-card small { font-size: 14px !important; line-height: 1.55 !important; }
+      .hero-tags span { font-size: 15px !important; padding: 10px 16px !important; }
+      .service-card:first-child h3 { white-space: nowrap !important; }
+      .strength-grid span { font-size: 26px !important; margin-bottom: 4px !important; }
+      .strength-grid h3 { margin-top: 12px !important; }
+      .contact-route h3 { font-size: 18px !important; }
+      .form-button { flex-direction: column !important; gap: 0 !important; line-height: 1.35 !important; }
+      .form-button .button-line { display: block !important; }
     }
   </style>
   <script src="./script.js" defer></script>
