@@ -374,4 +374,12 @@ html body .intro-copy > p:not(.review-note) {
   html body .hero h1 {
     font-size: clamp(54px, 6.2vw, 82px) !important;
   }
+
+  html body .people-copy h2 {
+    font-size: clamp(42px, 4.2vw, 52px) !important;
+    line-height: 1.22 !important;
+    letter-spacing: -0.04em !important;
+    word-break: keep-all !important;
+    overflow-wrap: normal !important;
+  }
 }
