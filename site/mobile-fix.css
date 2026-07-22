@@ -257,3 +257,16 @@ html body .intro-copy > p:not(.review-note) {
     z-index: 1005 !important;
   }
 }
+
+/* Contact heading line-break refinement. */
+@media (max-width: 760px) {
+  html body .contact-box h2 {
+    max-width: 100% !important;
+    font-size: clamp(38px, 11vw, 48px) !important;
+    line-height: 1.28 !important;
+    letter-spacing: -0.04em !important;
+    word-break: keep-all !important;
+    overflow-wrap: normal !important;
+    text-wrap: balance;
+  }
+}
