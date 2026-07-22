@@ -11,7 +11,8 @@
   <style>
     .brand { gap: 0; }
     .brand-text strong { letter-spacing: 0.04em; }
-    .service-card h3 { word-break: keep-all; }
+    .service-card h3 { word-break: normal; overflow-wrap: anywhere; }
+    .nowrap { white-space: nowrap; }
 
     .global-nav,
     .global-nav a {
@@ -133,10 +134,10 @@
     .strength-grid span {
       display: block !important;
       font-size: 22px !important;
-      line-height: 1.1 !important;
-      margin-bottom: 8px !important;
+      line-height: 1 !important;
+      margin-bottom: 0 !important;
     }
-    .strength-grid h3 { margin-top: 18px !important; }
+    .strength-grid h3 { margin-top: 4px !important; }
 
     @media (max-width: 980px) {
       .global-nav a { font-size: 15px !important; }
@@ -146,22 +147,27 @@
       .contact-routes { grid-template-columns: 1fr; }
       .hero { padding-top: 54px !important; }
       .hero-lead { font-size: 14px !important; line-height: 1.95 !important; }
-      .visual-core { width: 150px !important; height: 150px !important; margin-bottom: 4px !important; border-width: 8px !important; }
+      .intro h2 { font-size: clamp(38px, 11vw, 52px) !important; line-height: 1.28 !important; }
+      .people-copy h2 { font-size: clamp(43px, 13vw, 58px) !important; line-height: 1.18 !important; }
+      .employment-support h3 { font-size: 20px !important; line-height: 1.55 !important; }
+      .visual-core { order: 2; width: 150px !important; height: 150px !important; margin: 0 auto 4px !important; border-width: 8px !important; }
       .visual-core strong { font-size: 36px !important; }
       .visual-core span { font-size: 10px !important; line-height: 1.45 !important; }
       .visual-card,
       .card-telecom,
       .card-sales,
-      .card-event { min-height: 122px !important; padding: 18px 16px !important; }
-      .card-telecom { grid-column: 1 / -1 !important; width: min(100%, 280px) !important; justify-self: center !important; }
-      .card-event { grid-column: auto !important; }
-      .hero-visual .card-number { font-size: 16px !important; margin-bottom: 5px !important; }
+      .card-event { min-height: 118px !important; padding: 16px 14px !important; }
+      .card-telecom { order: 1; grid-column: 1 / -1 !important; width: min(100%, 280px) !important; justify-self: center !important; }
+      .card-sales { order: 3; }
+      .card-event { order: 4; grid-column: auto !important; }
+      .hero-visual .card-number { font-size: 16px !important; margin-bottom: 4px !important; }
       .hero-visual .visual-card strong { font-size: 21px !important; line-height: 1.35 !important; }
       .hero-visual .visual-card small { font-size: 14px !important; line-height: 1.55 !important; }
       .hero-tags span { font-size: 15px !important; padding: 10px 16px !important; }
+      .service-card h3 { white-space: normal !important; word-break: normal !important; overflow-wrap: anywhere !important; font-size: 23px !important; line-height: 1.45 !important; }
       .service-card:first-child h3 { white-space: nowrap !important; }
-      .strength-grid span { font-size: 26px !important; margin-bottom: 4px !important; }
-      .strength-grid h3 { margin-top: 12px !important; }
+      .strength-grid span { font-size: 26px !important; margin-bottom: 0 !important; }
+      .strength-grid h3 { margin-top: 2px !important; }
       .contact-route h3 { font-size: 18px !important; }
       .form-button { flex-direction: column !important; gap: 0 !important; line-height: 1.35 !important; }
       .form-button .button-line { display: block !important; }
@@ -223,7 +229,7 @@
       <div class="container intro-grid">
         <div>
           <p class="section-label">ABOUT SMC</p>
-          <h2>任された業務を、<br>現場で前に進める会社。</h2>
+          <h2><span class="nowrap">任された業務を、</span><br>現場で前に進める会社。</h2>
         </div>
         <div class="intro-copy">
           <p>SMC株式会社は、企業活動に必要な業務プロセスを受託し、現場実務として運用するBPO会社です。オフィス内の業務支援から、お客様への提案、イベント会場での運営まで、仕事ごとに必要な役割を理解し、チームで対応します。</p>
@@ -280,9 +286,9 @@
       <div class="container people-grid">
         <div class="people-copy">
           <p class="section-label light">WORKING AT SMC</p>
-          <h2>一緒に動き、一緒に成長する。</h2>
+          <h2>一緒に動き、<br>一緒に成長する。</h2>
           <p>SMCでは、20代を中心としたメンバーが、通信、営業、イベントなど異なる現場で働いています。経験の有無だけではなく、周囲と連携し、仕事に前向きに取り組めることを大切にしたいと考えています。</p>
-          <div class="employment-support"><p class="employment-support-label">EMPLOYMENT SUPPORT</p><h3>安心して働き、成長していける環境づくり。</h3><p>SMCは、社会保険・労働保険・雇用保険に加入しています。また、従業員のキャリアアップを支えるための環境づくりに取り組んでいます。</p></div>
+          <div class="employment-support"><p class="employment-support-label">EMPLOYMENT SUPPORT</p><h3>安心して働き、成長していける<br>環境づくり。</h3><p>SMCは、社会保険・労働保険・雇用保険に加入しています。また、従業員のキャリアアップを支えるための環境づくりに取り組んでいます。</p></div>
           <a class="text-link" href="https://docs.google.com/forms/d/e/1FAIpQLSfFBRMqE3r44bD818r5NtwtHsLJtmiivRG4xyZ4yX5OUWGHTA/viewform?usp=header" target="_blank" rel="noopener">採用・転籍について相談する <span>→</span></a>
         </div>
         <div class="people-panel">
@@ -308,7 +314,7 @@
           <div><dt>設立</dt><dd>2025年9月1日</dd></div>
           <div><dt>資本金</dt><dd>500万円</dd></div>
           <div><dt>決算期</dt><dd>8月（毎年9月1日〜翌年8月31日）</dd></div>
-          <div><dt>各種登録</dt><dd>適格請求書発行事業者登録済み / 社会保険・労働保険・雇用保険 加入済み</dd></div>
+          <div><dt>各種登録</dt><dd>適格請求書発行事業者登録済み<br>社会保険・労働保険・雇用保険 加入済み</dd></div>
         </dl>
       </div>
     </section>
