@@ -382,4 +382,20 @@ html body .intro-copy > p:not(.review-note) {
     word-break: keep-all !important;
     overflow-wrap: normal !important;
   }
+
+  html body .contact-box h2 {
+    font-size: 0 !important;
+    line-height: 0 !important;
+  }
+
+  html body .contact-box h2::before {
+    display: block;
+    color: #082a57;
+    content: "仕事の相談も、\A働く相談も。";
+    white-space: pre;
+    font-size: clamp(38px, 3.2vw, 44px);
+    font-weight: 900;
+    line-height: 1.3;
+    letter-spacing: -0.05em;
+  }
 }
